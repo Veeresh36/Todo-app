@@ -43,7 +43,6 @@ function taskslist(setGetData) {
         fetchTasks()
     }, [])
 
-    setGetData(fetchTasks)
 
     //edit handler
     let editHandler = (task) => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import style from '../components/dataadd.module.css'
 import { useNavigate } from 'react-router-dom';
