@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [ getdata, setGetData ] = useState([])
+  const [ togetdata, setGetData ] = useState([])
 
   return (
     <>
@@ -21,7 +21,7 @@ function App() {
               <Route path='/tasks' element={<Tasklist setGetData={setGetData} />} />
             </Routes>
           </div>
-          <Dataadd getdata={getdata}/>
+          <Dataadd togetdata={togetdata}/>
         </div>
       </Router>
     </>

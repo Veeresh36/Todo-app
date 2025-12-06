@@ -37,12 +37,13 @@ function taskslist(setGetData) {
         let result = await response.json()
         console.log("API data:", result);
         setTasks(result)
-        setGetData(result)
     }
 
     useEffect(() => {
         fetchTasks()
     }, [])
+
+    setGetData(fetchTasks)
 
     //edit handler
     let editHandler = (task) => {
