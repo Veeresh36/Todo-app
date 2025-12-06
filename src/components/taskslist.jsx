@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import style from '../components/tasklist.module.css'
 import { NavLink, Link } from 'react-router-dom'
 
-function taskslist() {
+function taskslist(setGetData) {
 
     let [tasks, setTasks] = useState([])
     let [editData, setEditData] = useState(null)
@@ -37,6 +37,7 @@ function taskslist() {
         let result = await response.json()
         console.log("API data:", result);
         setTasks(result)
+        setGetData(result)
     }
 
     useEffect(() => {

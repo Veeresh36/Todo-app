@@ -8,6 +8,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [ getdata, setGetData ] = useState([])
 
   return (
     <>
@@ -17,10 +18,10 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/" element={<Navigate to="/tasks" />} />
-              <Route path='/tasks' element={<Tasklist />} />
+              <Route path='/tasks' element={<Tasklist setGetData={setGetData} />} />
             </Routes>
           </div>
-          <Dataadd />
+          <Dataadd getdata={getdata}/>
         </div>
       </Router>
     </>

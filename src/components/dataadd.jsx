@@ -3,7 +3,7 @@ import { useState } from 'react'
 import style from '../components/dataadd.module.css'
 import { useNavigate } from 'react-router-dom';
 
-function dataadd() {
+function dataadd(getdata) {
 
     const [isHovered, setIsHovered] = useState(true);
     let [getdata, setGetData] = useState({ title: "", descs: "" });
@@ -32,6 +32,7 @@ function dataadd() {
 
         if (response.status === 200) {
             alert(result.message);
+            getdata()
             setGetData({ title: "", descs: "" }); // reset after submiting the data
         }
     }
