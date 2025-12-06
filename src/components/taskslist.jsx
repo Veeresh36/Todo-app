@@ -14,7 +14,7 @@ function taskslist() {
     const taskCOmpleteHandler = async (taskid, curStatus) => {
         const newStatus = curStatus === 2 ? 1 : 2;
 
-        let response = await fetch(`https://todo-app-backend-api-6sz6.onrender.com/updatestatus/${taskid}`, {
+        let response = await fetch(`http://localhost:5000/updatestatus/${taskid}`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ tstatus: newStatus })

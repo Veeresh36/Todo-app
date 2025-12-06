@@ -21,7 +21,7 @@ function dataadd() {
 
     let SubmitHandler = async (e) => {
         e.preventDefault()
-        let response = await fetch("https://todo-app-backend-api-6sz6.onrender.com/insertData", {
+        let response = await fetch("http://localhost:5000/insertData", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
