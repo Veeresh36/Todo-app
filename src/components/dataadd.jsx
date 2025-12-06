@@ -7,17 +7,26 @@ function dataadd(togetdata) {
 
     const [isHovered, setIsHovered] = useState(true);
     let [getdata, setGetData] = useState({ title: "", descs: "" });
-    let [ emptyData, setEmptyData ] = useState(false)
+    let [emptyData, setEmptyData] = useState(false)
 
+    // geting the data from 
+    let fetchTasks = async () => {
+        let response = await fetch("http://localhost:5000/tasklist")
+        let result = await response.json()
+        console.log("API data:", result);
+        setTasks(result)
+    }
 
     let textBoxHandler = (e) => {
         let { name, value } = e.target
         setGetData((existing) => ({
-            ...existing, [name]: value  
+            ...existing, [name]: value
         }))
     }
 
-
+    useEffect(() => {
+        fetchTasks()
+    }, [])
 
     let SubmitHandler = async (e) => {
         e.preventDefault()
@@ -32,7 +41,7 @@ function dataadd(togetdata) {
 
         if (response.status === 200) {
             alert(result.message);
-            togetdata()
+            fetchTasks()
             setGetData({ title: "", descs: "" }); // reset after submiting the data
         }
     }
@@ -56,7 +65,7 @@ function dataadd(togetdata) {
                                     <form onSubmit={SubmitHandler}>
                                         <div className="mb-3">
                                             <span>Title</span>
-                                            <input type="text" name='title' onChange={textBoxHandler} placeholder='Name your next step' required/>
+                                            <input type="text" name='title' onChange={textBoxHandler} placeholder='Name your next step' required />
                                         </div>
 
                                         <div className="mb-3">
@@ -64,7 +73,7 @@ function dataadd(togetdata) {
                                             <textarea id="" name='descs' onChange={textBoxHandler} placeholder='Add notes to make it easier later' rows={8}></textarea>
                                         </div>
                                         <div className="mb-3">
-                                            <input type="submit" className='btn btn-primary w-25' aria-label="Close" data-bs-dismiss="offcanvas"/>
+                                            <input type="submit" className='btn btn-primary w-25' aria-label="Close" data-bs-dismiss="offcanvas" />
                                         </div>
                                     </form>
                                 </div>
