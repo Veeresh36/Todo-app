@@ -1,46 +1,122 @@
-.sideMenuContainer{
+.sideMenuContainer {
     height: 100vh;
     padding: 15px;
     border-right: 1px solid #ddd;
     position: relative;
 }
 
-.sideMenu{
-    width: 20%;
+.sideMenu {
+    width: 25%;
     height: 100vh;
-    padding: 15px;
     border-right: 1px solid #ddd;
+    padding-right: 25px;
 }
 
-.navItems Link{
+.navItems Link {
     color: #1C1C1C;
     margin-bottom: 10px;
     border-radius: 10px;
 }
 
-.navLink{
+.navLink {
     background-color: tomato;
 }
 
-Link.active{
+Link.active {
     background-color: #00b0d5;
     border-radius: 50px;
     color: #fff;
 }
 
-.sideMenu .logo{
-    width: 18%;
+.sideMenu .logo {
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #2f2f2f;
     position: absolute;
-    left: 20px;
+    left: 10px;
     bottom: 30px;
 }
 
-.logo img{
+.logo img {
     width: 60%;
     height: auto;
     padding: 5px;
 }
+
+/* Xs  */
+@media (min-width: 475px) {
+    .sideMenu .logo {
+        width: 23%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2f2f2f;
+        position: absolute;
+        left: 10px;
+        bottom: 30px;
+    }
+}
+
+/* Sm  */
+/* @media (min-width: 640px){} */
+
+/* Md  */
+/* @media (min-width: 768px){} */
+
+/* Lg  */
+@media (min-width: 1024px) {
+    .sideMenuContainer {
+        height: 100vh;
+        padding: 15px;
+        border-right: 1px solid #ddd;
+        position: relative;
+    }
+
+    .sideMenu {
+        width: 20%;
+        height: 100vh;
+        padding: 15px;
+        border-right: 1px solid #ddd;
+    }
+
+    .navItems Link {
+        color: #1C1C1C;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .navLink {
+        background-color: tomato;
+    }
+
+    Link.active {
+        background-color: #00b0d5;
+        border-radius: 50px;
+        color: #fff;
+    }
+
+    .sideMenu .logo {
+        width: 18%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2f2f2f;
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+    }
+
+    .logo img {
+        width: 60%;
+        height: auto;
+        padding: 5px;
+    }
+}
+
+/* XL  */
+/* @media (min-width: 1280px){} */
+
+/* 2xL  */
+/* @media (min-width: 1536px){} */

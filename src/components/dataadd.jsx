@@ -73,7 +73,7 @@ function dataadd(togetdata) {
                                             <textarea id="" name='descs' onChange={textBoxHandler} placeholder='Add notes to make it easier later' rows={8}></textarea>
                                         </div>
                                         <div className="mb-3">
-                                            <input type="submit" className='btn btn-primary w-25' aria-label="Close" data-bs-dismiss="offcanvas" />
+                                            <input type="submit" className='btn btn-primary w-100' aria-label="Close" data-bs-dismiss="offcanvas" />
                                         </div>
                                     </form>
                                 </div>

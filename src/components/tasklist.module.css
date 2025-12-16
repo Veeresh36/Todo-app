@@ -1,18 +1,17 @@
 .container {
-    width: 78%;
+    width: 65%;
     height: 90vh;
-    position: absolute;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: start;
     flex-direction: column;
+    position: absolute;
     top: 30px;
-    left: 335px;
-    padding: 20px;
+    right: 20px;
     overflow-y: scroll;
 }
 
-.container h3{
+.container h3 {
     text-align: center;
     margin: 0;
 }
@@ -28,16 +27,18 @@ h1 {
 }
 
 .card {
-    width: 49%;
+    width: 100%;
     min-height: 150px;
     height: auto;
     text-align: start;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.card button{
+.card button {
     width: 100%;
     border: none;
     outline: none;
@@ -80,43 +81,46 @@ h1 {
 
 }
 
-.contentbody{
+.contentbody {
     width: 50%;
-    
+
 }
 
-.bodycontainer{
+.bodycontainer {
     width: 100%;
     height: 100%;
     position: absolute;
     left: -10px;
 }
 
-.boxbody{
+.boxbody {
     width: 100%;
     height: 100vh;
 }
 
-.boxbody content h5, p{
+.boxbody content h5,
+p {
     padding: 30px 0;
 }
 
-.actions{
+.actions {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-top: 20px;
 }
 
-.userid{
+.userid {
     display: none;
 }
 
-textarea{
+textarea {
     width: 90%;
     height: 45vh;
 }
 
-.content input[type="text"]{
+.content input[type="text"] {
     padding: 10px;
     margin-bottom: 10px;
     border: none;
@@ -124,22 +128,640 @@ textarea{
     border: 1px solid #666;
 }
 
-.content textarea{
+.content textarea {
     width: 100%;
     padding: 1px 30px;
     line-height: 30px;
     letter-spacing: 1px;
 }
 
-.content{
+.content {
     margin: 10px 20px;
 }
 
 
-.actions .deleteBtn{
+.actions .deleteBtn {
     width: 50px;
 }
 
-.actions .deleteBtn svg{
+.actions .deleteBtn svg {
     width: 20px;
 }
+
+/* Xs  */
+@media (min-width: 475px) {
+    .container {
+        width: 65%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        overflow-y: scroll;
+    }
+
+    .container h3 {
+        text-align: center;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        min-height: 150px;
+        height: auto;
+        text-align: start;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card button {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    .card h5 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .descShort {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        background-color: #888;
+    }
+
+    .col {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+        padding: 20px;
+        background-color: transparent;
+
+    }
+
+    .contentbody {
+        width: 50%;
+
+    }
+
+    .bodycontainer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+    }
+
+    .boxbody {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .boxbody content h5,
+    p {
+        padding: 30px 0;
+    }
+
+    .actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .userid {
+        display: none;
+    }
+
+    textarea {
+        width: 90%;
+        height: 45vh;
+    }
+
+    .content input[type="text"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        outline: none;
+        border: 1px solid #666;
+    }
+
+    .content textarea {
+        width: 100%;
+        padding: 1px 30px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+
+    .content {
+        margin: 10px 20px;
+    }
+
+
+    .actions .deleteBtn {
+        width: 50px;
+    }
+
+    .actions .deleteBtn svg {
+        width: 20px;
+    }
+}
+
+/* Sm  */
+@media (min-width: 640px) {
+    .container {
+        width: 65%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        overflow-y: scroll;
+    }
+
+    .container h3 {
+        text-align: center;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        min-height: 150px;
+        height: auto;
+        text-align: start;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card button {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    .card h5 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .descShort {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        background-color: #888;
+    }
+
+    .col {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+        padding: 20px;
+        background-color: transparent;
+
+    }
+
+    .contentbody {
+        width: 50%;
+
+    }
+
+    .bodycontainer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+    }
+
+    .boxbody {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .boxbody content h5,
+    p {
+        padding: 30px 0;
+    }
+
+    .actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .userid {
+        display: none;
+    }
+
+    textarea {
+        width: 90%;
+        height: 45vh;
+    }
+
+    .content input[type="text"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        outline: none;
+        border: 1px solid #666;
+    }
+
+    .content textarea {
+        width: 100%;
+        padding: 1px 30px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+
+    .content {
+        margin: 10px 20px;
+    }
+
+
+    .actions .deleteBtn {
+        width: 50px;
+    }
+
+    .actions .deleteBtn svg {
+        width: 20px;
+    }
+}
+
+/* Md  */
+/* @media (min-width: 768px){} */
+
+/* Lg  */
+@media (min-width: 1024px) {
+    .container {
+        width: 78%;
+        height: 90vh;
+        position: absolute;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        top: 30px;
+        right: -5px;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+
+    .container h3 {
+        text-align: center;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        width: 49%;
+        min-height: 150px;
+        height: auto;
+        text-align: start;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .card button {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    .card h5 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .descShort {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        background-color: #888;
+    }
+
+    .col {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+        padding: 20px;
+        background-color: transparent;
+
+    }
+
+    .contentbody {
+        width: 50%;
+
+    }
+
+    .bodycontainer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+    }
+
+    .boxbody {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .boxbody content h5,
+    p {
+        padding: 30px 0;
+    }
+
+    .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .userid {
+        display: none;
+    }
+
+    textarea {
+        width: 90%;
+        height: 45vh;
+    }
+
+    .content input[type="text"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        outline: none;
+        border: 1px solid #666;
+    }
+
+    .content textarea {
+        width: 100%;
+        padding: 1px 30px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+
+    .content {
+        margin: 10px 20px;
+    }
+
+
+    .actions .deleteBtn {
+        width: 50px;
+    }
+
+    .actions .deleteBtn svg {
+        width: 20px;
+    }
+
+}
+
+/* XL  */
+@media (min-width: 1280px) {
+    .container {
+        width: 78%;
+        height: 90vh;
+        position: absolute;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        top: 30px;
+        right: -5px;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+
+    .container h3 {
+        text-align: center;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        width: 49%;
+        min-height: 150px;
+        height: auto;
+        text-align: start;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: start;
+        justify-content: end;
+    }
+
+    .card button {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    .card h5 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .descShort {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        background-color: #888;
+    }
+
+    .col {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+        padding: 20px;
+        background-color: transparent;
+
+    }
+
+    .contentbody {
+        width: 50%;
+
+    }
+
+    .bodycontainer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+    }
+
+    .boxbody {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .boxbody content h5,
+    p {
+        padding: 30px 0;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .userid {
+        display: none;
+    }
+
+    textarea {
+        width: 90%;
+        height: 45vh;
+    }
+
+    .content input[type="text"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        outline: none;
+        border: 1px solid #666;
+    }
+
+    .content textarea {
+        width: 100%;
+        padding: 1px 30px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+
+    .content {
+        margin: 10px 20px;
+    }
+
+
+    .actions .deleteBtn {
+        width: 50px;
+    }
+
+    .actions .deleteBtn svg {
+        width: 20px;
+    }
+}
+
+/* 2xL  */
+/* @media (min-width: 1536px){} */
